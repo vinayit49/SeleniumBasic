@@ -1,0 +1,40 @@
+package SeleniumSimple;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SwitchCommands {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://blazedemo.com/");
+		Thread.sleep(3000);
+		WebElement ele=driver.findElement(By.name("fromPort"));
+		Select sle=new Select(ele);
+		sle.selectByVisibleText("Portland");
+		Thread.sleep(2000);
+		WebElement ele1=driver.findElement(By.name("toPort"));
+		Select sle1=new Select(ele1);
+		sle1.selectByVisibleText("London");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[@type-'submit']")).click();
+		
+		
+				
+				
+				
+				
+				
+				
+		
+	}
+
+}

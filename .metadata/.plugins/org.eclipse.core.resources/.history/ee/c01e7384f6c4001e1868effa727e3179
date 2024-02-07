@@ -1,0 +1,18 @@
+package SeleniumSimple;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class GooglePage {
+
+	public static void main(String[] args) {
+	
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\New\\eclipse-workspace\\Vinay\\SeleniumBasic\\driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.browserstack.com/users/sign_in");
+
+	}
+
+}

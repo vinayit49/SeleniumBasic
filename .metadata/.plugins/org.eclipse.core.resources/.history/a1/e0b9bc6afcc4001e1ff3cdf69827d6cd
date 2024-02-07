@@ -1,0 +1,23 @@
+package SeleniumSimple;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class GooglePage {
+
+	public static void main(String[] args) {
+	//System.setProperty("webdriver.chrome.driver", "C:\Users\New\eclipse-workspace\Vinay\SeleniumBasic\driver\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.google.com");
+		driver.findElement(By.id("APjFqb")).sendKeys("Capgemini");
+		driver.findElement(By.name("btnK")).click();
+        driver.findElement(By.xpath("//h3[@class='LC20lb MBeuO DKV0Md']")).click();
+        
+	}
+
+}

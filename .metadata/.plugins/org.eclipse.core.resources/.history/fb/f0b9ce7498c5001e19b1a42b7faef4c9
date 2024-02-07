@@ -1,0 +1,10 @@
+package SeleniumSimple;
+
+public class SearchProduct {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
